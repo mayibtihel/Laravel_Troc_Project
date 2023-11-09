@@ -1,0 +1,5 @@
+
+regex for local js: find <script src="(assets[^"]*.js[^"]*)"></script> replace with @vite(['resources/frontassets/$1'])
+regex for local css: find  <link[^<]* href="([^http][^"]*.css[^"]*)"[^>]*> replace with @vite(['resources/frontassets/$1'])
+regex for local url image" :  "assets([^{][^"]*)" replace with "{{Vite::asset('resources/frontassets/assets$1')}}"
+regex for local url image" :  'assets([^{][^']*)' replace with '{{Vite::asset('resources/frontassets/assets$1')}}'
